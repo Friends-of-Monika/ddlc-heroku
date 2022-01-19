@@ -1,0 +1,23 @@
+{
+  "name": "HerokuDE",
+  "description": "Minimal desktop environment running in Heroku dyno",
+  "repository": "https://github.com/dreamscached/herokude",
+  "keywords": [
+    "desktop-environment",
+    "fluxbox",
+    "desktop",
+    "heroku",
+    "de"
+  ],
+  "env": {
+    "GEOMETRY": {
+      "description": "Defines screen geometry in format WIDTHxHEIGHTxDEPTH",
+      "value": "1920x1080x16"
+    },
+    "COMMANDLINE": {
+      "description": "Defines command line to run upon initial setup of window manager and VNC",
+      "value": "bash /data/launch.sh"
+    }
+  },
+  "stack": "container"
+}
