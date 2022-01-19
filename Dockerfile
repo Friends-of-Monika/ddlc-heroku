@@ -12,9 +12,7 @@ ENV GEOMETRY=1920x1080x16 \
 
 COPY launch.sh /data/launch.sh
 
-# If necessary, you can add one more build step to install additional
-# packages here to speed up consequent builds by letting Docker reuse
-# previous steps without full rebuild.
-
-# As an example, here's xterm install line.
-RUN apt install xterm
+COPY ddlc /data/ddlc
+COPY [ "persistent", "/.renpy/Monika After Story" ]
+RUN ln -sf "/.renpy/Monika After Story" /usr/share/novnc/persistent && \
+    ln -sf /data/ddlc /usr/share/novnc/ddlc
