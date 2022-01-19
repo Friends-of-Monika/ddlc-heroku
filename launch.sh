@@ -1,2 +1,2 @@
 #!/bin/bash
-bash /data/ddlc/DDLC.sh
+bash /data/ddlc/DDLC.sh &
